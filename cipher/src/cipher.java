@@ -70,7 +70,7 @@ public class cipher
 				{
 			    int c_test = (char)(Character.toLowerCase(c) - key); // This changes all the characters to lowercase. Uppercase ascii values are different than lowercase ones. 
 			    if (c_test < 'a') {//Flips the order the characters are manipulated
-			        ciphertext += (char)('z' + (c_test - 'a')); // calculates the offset from the test value to 'a' (always negative) and adds it to 'z'
+			        ciphertext += (char)('z' + (c_test - 'a' + 1)); // calculates the offset from the test value to 'a' (always negative) and adds it to 'z'
                 } else
 			        ciphertext += (char)(c - key); //if the character value is less than Z it is added normally
 				}
